@@ -1,0 +1,14 @@
+<div class="center">
+    <h1 class="mat-headline">Vote for your 5 favorite songs!</h1>
+</div>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+  <div class="parent">
+    <mat-form-field>
+      <div style="text-align:center;">
+        <input matInput placeholder="Enter your nickname" name="nickname" formControlName="nickname" type="name" />
+      </div>
+    </mat-form-field>
+    <button mat-flat-button color="primary" type="submit">Continue</button>
+  </div>
+</form>

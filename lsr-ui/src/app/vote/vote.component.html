@@ -1,0 +1,26 @@
+<div class="center">
+    <h1 class="mat-headline">Vote for your 5 favorite songs of 2018!</h1>
+</div>
+<form [formGroup]="voteForm" (ngSubmit)="onSubmit(voteForm.value)">
+<div class="content">
+    <mat-card fxFlex="33%">
+        <mat-selection-list #songs name="selectedOptions" formControlName="selectedOptions">
+            <mat-list-option #song *ngFor="let songInfo of songList" 
+                [selected]="hasBeenPreviouslySelected(songInfo.id)"
+                [disabled]="disableSubmit ||(songs.selectedOptions.selected.length == maxVotes && !song.selected)"
+                value="{{songInfo.id}}">
+                <span>{{songInfo.genre}}:</span> {{songInfo.artistName}} - {{songInfo.name}}
+            </mat-list-option>
+        </mat-selection-list>
+    </mat-card>
+</div>
+<div class="footer">
+    <mat-toolbar color="primary" class="submit-toolbar">
+        <span>{{songs.selectedOptions.selected.length}}/{{maxVotes}}</span>
+        <span class="fill-space"></span>
+        <button mat-flat-button color="accent" type="submit" 
+            [disabled]="disableSubmit || (songs.selectedOptions.selected.length < maxVotes)" 
+            type="submit">Submit</button>
+    </mat-toolbar>
+</div>
+</form>

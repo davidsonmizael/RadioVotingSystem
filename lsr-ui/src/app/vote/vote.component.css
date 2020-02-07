@@ -1,0 +1,16 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+.submit-toolbar {
+    position: fixed;
+    bottom: 0;
+    max-height: 60px;
+}
+.content{
+    margin-bottom: 60px;
+}
+
+.fill-space {
+    flex: 1 1 auto;
+  }

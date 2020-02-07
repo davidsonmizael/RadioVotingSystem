@@ -1,0 +1,10 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+.content{
+    margin-bottom: 60px;
+}
+table {
+    width: 100%;
+}
