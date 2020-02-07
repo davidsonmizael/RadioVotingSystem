@@ -18,13 +18,20 @@ Simply run the building script located in the root folder.
 $ sh build.sh
 ```
 
-### Running
+##### Running
 
 To run you simply need to run the starting script.
 
 ```sh
 $ sh start.sh
 ```
+
+
+### Routes
+
+- To start access `http://localhost/`
+- The admin page can be accessed on `http://localhost/admin`
+
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
